@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 65.5%;
+}
+
+header {
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/*Menu*/
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.menu {
+    width: 100%;
+    font-size: 2rem;
+    z-index: 1000;
+    height: 4rem;
+}
+
+.menu > ul {
+    text-align: center;
+}
+
+.menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+
+.menu > ul > li {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    margin-top: 0.7rem;
+}
+
+.menu > ul > li > a {
+    padding: 3rem;
+}
+
+.menu i:first-child {
+    display: none;
+}
+
+/*Menu déroulant*/
+
+.sous-menu {
+    display: none;
+    width: 100%;
+}
+
+.sous-menu li {
+    border-bottom: 2px white solid;
+    padding: 1rem;
+}
+
+.menu li:hover .sous-menu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    z-index: 1000;
+    background-color: darkred;
+    left: 0;
+}
+
+
+@media screen and (max-width: 880px) {
+
+   .menu {
+       height: 8rem;
+       font-size: 1.5rem;
+   }
+
+    .menu > ul > li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 1rem;
+        margin-top: 0;
+        left: 0;
+    }
+
+    .menu i:first-child {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    header {
+        width: 50%;
+        display: inline-block;
+        height: 30rem;
+    }
+
+    .menu > ul > li {
+        margin-left: -31px;
+    }
+}
